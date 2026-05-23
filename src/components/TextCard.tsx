@@ -182,7 +182,7 @@ export default function TextCard({ analysis, analysisKey, frame, onNext, onPrev,
       }
       addAppliedChange(change)
 
-      fetch('/vi-relay', {
+      fetch('/api/vi-relay', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nodeId: analysis.nodeId, newText, originalText: analysis.originalText }),

@@ -212,7 +212,7 @@ export default function ReviewTab() {
   async function refreshFrameImage() {
     if (!selectedFrameId || !fileKey) return
     // Brief delay so Figma has time to process the plugin change before we hit the render API
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    await new Promise(resolve => setTimeout(resolve, 500))
     setLoadingImage(true)
     setImageError('')
     try {
